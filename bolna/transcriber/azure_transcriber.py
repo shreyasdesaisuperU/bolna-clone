@@ -105,7 +105,7 @@ class AzureTranscriber(BaseTranscriber):
             audio_config = speechsdk.audio.AudioConfig(stream=self.push_stream)
 
             auto_detect_source_language_config = speechsdk.languageconfig.AutoDetectSourceLanguageConfig(
-                languages=language
+                languages=["en-US", "hi-IN"]
             )
 
             # Instantiate a SpeechRecognizer with the above configuration
