@@ -9,7 +9,7 @@ RUN apt-get update && apt-get -y upgrade && apt-get install -y --no-install-reco
     gcc \
     g++
 RUN --mount=type=cache,target=/root/.cache/pip \
-    pip install git+https://github.com/shreyasdesaisuperU/bolna-clone@master
+    pip install git+https://github.com/shreyasdesaisuperU/bolna-clone@main
 COPY quickstart_server.py /app/
 COPY presets /app/presets
 
