@@ -1,7 +1,7 @@
 services:
 
   # main bolna service
-  bolna-app:
+  bolna-app-multilingual-test:
     image: bolna-app:latest
     build:
       context: .
