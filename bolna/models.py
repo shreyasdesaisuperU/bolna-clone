@@ -56,12 +56,12 @@ class SmallestConfig(BaseModel):
 class AzureConfig(BaseModel):
     voice: str
     model: str
-    language: str
+    language: list
 
 
 class Transcriber(BaseModel):
     model: Optional[str] = "nova-2"
-    language: Optional[str] = None
+    language: Optional[list] = None
     stream: bool = False
     sampling_rate: Optional[int] = 16000
     encoding: Optional[str] = "linear16"
