@@ -571,7 +571,8 @@ class TaskManager(BaseManager):
         try:
             if self.task_config["tools_config"]["transcriber"] is not None:
                 logger.info("Setting up transcriber")
-                self.language = self.task_config["tools_config"]["transcriber"].get('language', DEFAULT_LANGUAGE_CODE)
+                self.language = self.task_config["tools_config"]["transcriber"].get('language')
+                logger.info(f'**********self.language set is: {self.language}')
                 if self.turn_based_conversation:
                     provider = "playground"
                 elif self.is_web_based_call:
