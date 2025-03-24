@@ -52,8 +52,8 @@ services:
     env_file:
       - .env
 
-  plivo-app:
-    image: plivo-app:latest
+  plivo-app-multilingual-test:
+    image: plivo-app-multilingual-test:latest
     build:
       context: .
       dockerfile: dockerfiles/plivo_server.Dockerfile
