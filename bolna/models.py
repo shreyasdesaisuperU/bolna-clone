@@ -16,7 +16,7 @@ def validate_attribute(value, allowed_values):
 class PollyConfig(BaseModel):
     voice: str
     engine: str
-    language: list
+    language: str
     # volume: Optional[str] = '0dB'
     # rate: Optional[str] = '100%'
 
@@ -56,12 +56,12 @@ class SmallestConfig(BaseModel):
 class AzureConfig(BaseModel):
     voice: str
     model: str
-    language: list
+    language: str
 
 
 class Transcriber(BaseModel):
     model: Optional[str] = "nova-2"
-    language: Optional[list] = None
+    language: Optional[str] = None
     stream: bool = False
     sampling_rate: Optional[int] = 16000
     encoding: Optional[str] = "linear16"

@@ -14,7 +14,7 @@ load_dotenv()
 
 
 class AzureTranscriber(BaseTranscriber):
-    def __init__(self, telephony_provider, input_queue=None, output_queue=None, language=["en-US", "hi-IN"], encoding="linear16", **kwargs):
+    def __init__(self, telephony_provider, input_queue=None, output_queue=None, language="en-US", encoding="linear16", **kwargs):
         super().__init__(input_queue)
         self.transcription_task = None
         self.subscription_key = os.getenv('AZURE_SPEECH_KEY')
@@ -87,7 +87,7 @@ class AzureTranscriber(BaseTranscriber):
             speech_config = speechsdk.SpeechConfig(subscription=self.subscription_key, region=self.service_region)
 
             # Set recognition language
-            speech_config.speech_recognition_language = self.recognition_language
+            # speech_config.speech_recognition_language = self.recognition_language
 
             # Configuring the audio format
             audio_format = speechsdk.audio.AudioStreamFormat(
