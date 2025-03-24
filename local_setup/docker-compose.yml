@@ -2,7 +2,7 @@ services:
 
   # main bolna service
   bolna-app-multilingual-test:
-    image: bolna-app:latest
+    image: bolna-app-multilingual-test:latest
     build:
       context: .
       dockerfile: dockerfiles/bolna_server.Dockerfile
@@ -48,7 +48,7 @@ services:
     depends_on:
       - redis
       - ngrok
-      - bolna-app
+      - bolna-app-multilingual-test
     env_file:
       - .env
 
@@ -62,6 +62,6 @@ services:
     depends_on:
       - redis
       - ngrok
-      - bolna-app
+      - bolna-app-multilingual-test
     env_file:
       - .env
