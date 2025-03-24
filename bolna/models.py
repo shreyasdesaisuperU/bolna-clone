@@ -16,7 +16,7 @@ def validate_attribute(value, allowed_values):
 class PollyConfig(BaseModel):
     voice: str
     engine: str
-    language: str
+    language: list
     # volume: Optional[str] = '0dB'
     # rate: Optional[str] = '100%'
 
